@@ -1,6 +1,5 @@
 # ANS_PY_course
 
 Testing and exercices for Ansible/Python course
-M
 
-Mdified file on Test1 branch
+Week1: https://github.com/jpcerezo/ANS_PY_course/week1
