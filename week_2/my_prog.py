@@ -6,9 +6,11 @@ print_hello()
 
 
 '''
->>> import sys
->>> from pprint import pprint
->>> pprint(sys.path)
+
+import sys
+from pprint import pprint
+pprint(sys.path)
+
 ['',
  '/opt/local/Library/Frameworks/Python.framework/Versions/2.7/lib/python27.zip',
  '/opt/local/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7',
