@@ -32,7 +32,8 @@ def main():
 #    username = 'pyclass'
 #    password = '88newclass'
 
-    ip_addr = "192.168.1.230"
+#    ip_addr = "192.168.1.230"
+    ip_addr = raw_input("Enter IP Address: ")
     username = 'juampe'
     password = 'pimp01'
 
