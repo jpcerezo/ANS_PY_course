@@ -4,6 +4,7 @@ import telnetlib
 import time
 import socket
 import sys 
+from getpass import getpass
 
 TELNET_PORT = 23
 TELNET_TIMEOUT = 6
@@ -34,8 +35,8 @@ def main():
 
 #    ip_addr = "192.168.1.230"
     ip_addr = raw_input("Enter IP Address: ")
-    username = 'juampe'
-    password = 'pimp01'
+    username = raw_input("Enter username:")
+    password = getpass()
 
     remote_conn = telnet_connect(ip_addr)
     output = login(remote_conn, username, password)
