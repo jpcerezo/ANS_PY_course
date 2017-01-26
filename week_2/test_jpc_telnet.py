@@ -28,9 +28,13 @@ def telnet_connect(ipaddr):
         sys.exit("Connection timedouttt...")
 
 def main():
-    ip_addr = "184.105.247.70"
-    username = 'pyclass'
-    password = '88newclass'
+#    ip_addr = "184.105.247.70"
+#    username = 'pyclass'
+#    password = '88newclass'
+
+    ip_addr = "192.168.1.230"
+    username = 'juampe'
+    password = 'pimp01'
 
     remote_conn = telnet_connect(ip_addr)
     output = login(remote_conn, username, password)
