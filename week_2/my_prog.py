@@ -7,6 +7,11 @@ print_hello()
 
 '''
 
+list contents of a module:
+
+dir(module)
+
+
 import sys
 from pprint import pprint
 pprint(sys.path)
