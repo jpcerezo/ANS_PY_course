@@ -1,0 +1,89 @@
+#!/usr/bin/env python
+
+'''
+ANSIBLE - YAML
+
+Indentation matters
+Lists or dictionaries
+
+List
+'''
+---
+- element1
+- element2
+- element3
+
+#Dictionaries
+
+- key1: value1
+
+#or
+
+{key1: value1, key2: value2}
+
+#And comments
+
+# comment
+
+'''
+Ansible playbook: a script with instructions
+Split on a set of "plays"
+
+Play: specific action (task) in a set of hosts inside the playbook 
+'''
+---
+- hosts: localhost
+	vars:
+    hostname: pynet-rtr1
+  tasks:
+    - name: Generate configuration file
+      template: src=/Users/juampe/GIT/work23/templates/router1.j2
+                dest=/Users/juampe/GIT/work23/configs/router1.txt
+    - name: Generate configuration file
+      template: src=/Users/juampe/GIT/work23/templates/router1.j2
+                dest=/Users/juampe/GIT/work23/configs/router1.txt
+    - name: Generate configuration file
+      template: src=/Users/juampe/GIT/work23/templates/router1.j2
+                dest=/Users/juampe/GIT/work23/configs/router1.txt
+
+- hosts: webservers
+  tasks: 
+    - name: Do something good
+      action2:
+
+'''
+hosts: can be a group of hosts
+
+
+Inventory file:
+
+/etc/ansible/hosts
+
+or some other file:
+
+[local]
+localhost ansible_connection=local
+
+[devwww]
+devwww1 ansible_ssh_host=10.10.10.11 ansible_ssh_user=webservers
+devwww1 ansible_ssh_host=10.10.10.12 ansible_ssh_user=webservers
+devwww1 ansible_ssh_host=10.10.10.13 ansible_ssh_user=webservers
+devwww1 ansible_ssh_host=10.10.10.14 ansible_ssh_user=webservers
+
+[testnew]
+test1 ansible_ssh_host=10.240.0.1 ansible_ssh_user=gituser ansible_ssh_port=8022
+test2 ansible_ssh_host=10.240.0.2 ansible_ssh_user=gituser ansible_ssh_port=8022
+
+
+EXECUTION:
+
+$ ansible local    -m ping 
+          <group>     <module>
+
+And get an answer in JSON
+
+All remote hosts MUST have SSH connectivity, is what Ansible uses to work
+
+
+
+'''
