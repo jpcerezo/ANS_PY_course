@@ -1,0 +1,17 @@
+[local]
+localhost ansible_connection=local
+
+[cisco]
+ironman host=192.168.1.240 username=juampe port=22 password=pimp01
+shield host=192.168.1.241 username=juampe port=22 password=pimp01
+mortadelo host=192.168.1.230 username=juampe port=22 password=pimp01
+filemon host=192.168.1.231 username=juampe port=22 password=pimp01
+
+[cisco:vars]
+ansible_connection=local
+
+[junipers]
+vSRX1 host=192.168.1.170 username=juampe port=22
+vSRX2 host=192.168.1.171 username=juampe port=22
+vMX1 host=192.168.1.172 username=juampe port=22
+SRX3 host=192.168.1.173 username=juampe port=22
