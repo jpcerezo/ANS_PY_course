@@ -13,6 +13,7 @@ def main():
     '''
     Using Netmiko enter into configuration mode on a network device.
     Verify that you are currently in configuration mode.
+    Juampe
     '''
     password = getpass()
     for a_dict in (cisco1, cisco2, vsrx1):
