@@ -1,0 +1,8 @@
+routing-options {
+    static {
+        route 100.64.0.0/24 {
+            next-hop 192.168.1.172;
+            tag 1000 type 1;
+        }
+    }
+}
